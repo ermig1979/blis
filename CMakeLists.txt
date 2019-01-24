@@ -13,6 +13,6 @@ endif()
 include(ExternalProject)
 ExternalProject_Add(make_blis 
 	SOURCE_DIR ${BLIS_DIR}
-	CONFIGURE_COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/configure --prefix=${CMAKE_BINARY_DIR}/blis --enable-cblas ${BLIS_CFG}
+	CONFIGURE_COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/configure --prefix=${CMAKE_BINARY_DIR}/blis --enable-threading=pthreads ${BLIS_CFG}
 	BUILD_COMMAND ${MAKE}
 )
